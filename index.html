@@ -1,13 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Pretendard', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- Layout ---------- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 24px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 120px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 32px;
+    }
+
+    .hero .buttons a {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      margin-right: 12px;
+    }
+
+    .btn-primary {
+      background-color: #4f7cff;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background-color: #3b64e6;
+    }
+
+    .btn-secondary {
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    /* ---------- Card Section ---------- */
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      margin-top: 120px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <a href="1218.movie.boot/index.html">movie-main</a>
-    <a href="1218.movie.boot/movie.html">movie-movie1</a>
+
+  <div class="container">
+
+    <header>
+      <div class="logo">🐰 SooAh's Project</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">GitHub</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>프론트엔드 프로젝트 모음</h1>
+        <p>
+          여기는 설명인데요 내용은 나중에 생각할게요
+
+        </p>
+        <div class="buttons">
+          <a href="1218.movie.boot/index.html" class="btn-primary">프로젝트 보기</a>
+        </div>
+      </div>
+      <div>
+        <img src="https://dummyimage.com/420x300/edf1ff/999" alt="preview" style="width:100%; border-radius:20px;" />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>🎬 Movie App</h3>
+          <p>여기도 나중에</p>
+        </div>
+        <div class="card">
+          <h3>📝 Todo List</h3>
+          <p>여기도 나중에</p>
+        </div>
+        <div class="card">
+          <h3>📱 Mobile UI</h3>
+          <p>여기도 나중에</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 수아 | Frontend Practice
+    </footer>
+
+  </div>
+
 </body>
 </html>
